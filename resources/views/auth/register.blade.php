@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Register</title>
+  <title>Registrasi - Admin</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -32,18 +32,18 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">form Registrasi</h1>
+                <h1 class="h4 text-gray-900 mb-4">Form Registrasi</h1>
               </div>
               <form action="{{ route('register.simpan') }}" method="POST" class="user">
                 @csrf
                 <div class="form-group">
-                  <input name="nama" type="text" class="form-control form-control-user @error('nama')is-invalid @enderror" id="exampleInputName" placeholder="Name">
+                  <input name="nama" type="text" class="form-control form-control-user @error('nama')is-invalid @enderror" id="exampleInputName" placeholder="Nama">
                   @error('nama')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Alamat Address">
+                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Alamat">
                   @error('email')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror

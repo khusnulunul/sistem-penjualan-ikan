@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,5 +52,14 @@ Route::middleware('auth')->group(function () {
 		Route::get('edit/{id}', 'edit')->name('kategori.edit');
 		Route::post('edit/{id}', 'update')->name('kategori.tambah.update');
 		Route::get('hapus/{id}', 'hapus')->name('kategori.hapus');
+	});
+
+	Route::controller(CustomerController::class)->prefix('customer')->group(function () {
+		Route::get('', 'index')->name('customer');
+		Route::get('tambah', 'tambah')->name('customer.tambah');
+		Route::post('tambah', 'simpan')->name('customer.tambah.simpan');
+		Route::get('edit/{id}', 'edit')->name('customer.edit');
+		Route::post('edit/{id}', 'update')->name('customer.tambah.update');
+		Route::get('hapus/{id}', 'hapus')->name('customer.hapus');
 	});
 });
