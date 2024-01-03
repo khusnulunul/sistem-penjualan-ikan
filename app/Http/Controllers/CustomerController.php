@@ -14,7 +14,7 @@ class CustomerController extends Controller
 		return view('customer.index', ['data' => $customer]);
 	}
 
-	public function tambah()
+	public function tambah ()
 	{
 		$customer = Customer::get();
 
@@ -55,7 +55,7 @@ class CustomerController extends Controller
 
 		Customer::find($id)->update($data);
 
-		return redirect()->route('Customer');
+		return redirect()->route('customer');
 	}
 
 	public function hapus($id)

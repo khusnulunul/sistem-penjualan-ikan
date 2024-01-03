@@ -43,7 +43,7 @@
                   @enderror
                 </div>
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Alamat">
+                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Email">
                   @error('email')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror

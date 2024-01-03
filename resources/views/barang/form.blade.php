@@ -30,11 +30,11 @@
 							</select>
             </div>
             <div class="form-group">
-              <label for="harga">Harga Barang</label>
+              <label for="harga">Harga Barang Per-kg</label>
               <input type="number" class="form-control" id="harga" name="harga" value="{{ isset($barang) ? $barang->harga : '' }}">
             </div>
             <div class="form-group">
-              <label for="jumlah">Jumlah Barang</label>
+              <label for="jumlah">Jumlah Barang Per-kg</label>
               <input type="number" class="form-control" id="jumlah" name="jumlah" value="{{ isset($barang) ? $barang->jumlah : '' }}">
             </div>
           </div>

@@ -13,4 +13,9 @@ class Customer extends Model
 
 	protected $fillable = ['nama_customer', 'alamat_customer', 'no_telp', 'email_customer'];
 
+	public function customer()
+	{
+		return $this->belongsTo(Customer::class, 'id_customer');
+	}
+
 }

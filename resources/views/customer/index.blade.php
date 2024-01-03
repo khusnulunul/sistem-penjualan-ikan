@@ -26,7 +26,7 @@
             </tr>
           </thead>
           <tbody>
-            @php($no = 1)
+            @php($no =1)
             @foreach ($data as $row)
               <tr>
                 <th>{{ $no++ }}</th>
